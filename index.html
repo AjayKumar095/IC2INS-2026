@@ -1,238 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IC2INS-2026 — International Conference on Computational Intelligence and Networked Systems</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23012e55'/%3E%3Ccircle cx='50' cy='42' r='16' fill='%23ff5f19'/%3E%3Crect x='30' y='66' width='40' height='9' rx='4.5' fill='white'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .home-hero{padding:168px 0 80px;}
-  .hero-badges{display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:24px;}
-  .pill{
-    display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.75); backdrop-filter:blur(10px);
-    border:1px solid var(--line); padding:8px 16px; border-radius:100px; font-size:.8rem; font-weight:600; color:var(--navy);
-    box-shadow:var(--shadow-sm);
-  }
-  .pill i{color:var(--orange);}
-  .home-hero h1{font-size:clamp(2.3rem,5vw,3.8rem); line-height:1.1; max-width:920px; margin:0 auto;}
-  .home-hero h1 span{color:var(--orange);}
-  .home-hero .lead{max-width:60ch; margin:22px auto 0; color:var(--ink-soft); font-size:1.1rem;}
-  .facts-row{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:0; max-width:1000px; margin:50px auto 0;
-    background:var(--white); border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow-lg); overflow:hidden;
-  }
-  .facts-row .fact{padding:24px 20px; text-align:center; border-right:1px solid var(--line);}
-  .facts-row .fact:last-child{border-right:none;}
-  .facts-row .fact i{color:var(--orange); font-size:1.2rem; margin-bottom:10px; display:block;}
-  .facts-row .fact .lbl{font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700; display:block; margin-bottom:4px;}
-  .facts-row .fact .val{font-weight:700; color:var(--navy); font-size:.92rem;}
-  @media(max-width:760px){.facts-row{grid-template-columns:repeat(2,1fr);}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IC2INS-2027 — International Conference on Computational Intelligence and Networked Systems</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23012e55'/%3E%3Ccircle cx='50' cy='42' r='16' fill='%23ff5f19'/%3E%3Crect x='30' y='66' width='40' height='9' rx='4.5' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .home-hero {
+      padding: 168px 0 80px;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .75);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pill i {
+      color: var(--orange);
+    }
+
+    .home-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      line-height: 1.1;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .home-hero h1 span {
+      color: var(--orange);
+    }
+
+    .home-hero .lead {
+      max-width: 60ch;
+      margin: 22px auto 0;
+      color: var(--ink-soft);
+      font-size: 1.1rem;
+    }
+
+    .facts-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 1000px;
+      margin: 50px auto 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .facts-row .fact {
+      padding: 24px 20px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .facts-row .fact:last-child {
+      border-right: none;
+    }
+
+    .facts-row .fact i {
+      color: var(--orange);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .facts-row .fact .lbl {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--ink-soft);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .facts-row .fact .val {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: .92rem;
+    }
+
+    @media(max-width:760px) {
+      .facts-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="brand">
-    <img src="assets/img/geeta-university-logo.png" alt="Geeta University">
-    <div class="brand-sep"></div>
-    <img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026" style="height:36px;">
-    <div class="brand-text"><b>IC2INS-2026</b><span>10–11 Sept 2026 · Geeta University</span></div>
-  </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li class="has-dropdown">
-      <button class="nav-drop-btn">Author <i class="fa-solid fa-chevron-down"></i></button>
-      <div class="dropdown-menu">
-        <a href="call-for-papers.html"><i class="fa-solid fa-bullhorn"></i>Call for Papers</a>
-        <a href="schedule.html"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
-        <a href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Paper Submission Guidelines</a>
-        <a href="registration-details.html"><i class="fa-solid fa-user-check"></i>Registration Details</a>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/geeta-university-logo.png" alt="Geeta University">
+      <div class="brand-sep"></div>
+      <img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2027" style="height:36px;">
+      <div class="brand-text"><b>IC2INS-2027</b><span>10–11 Sept 2027 · Geeta University</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="has-dropdown">
+        <button class="nav-drop-btn">Author <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="dropdown-menu">
+          <a href="call-for-papers.html"><i class="fa-solid fa-bullhorn"></i>Call for Papers</a>
+          <a href="schedule.html"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
+          <a href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Paper Submission
+            Guidelines</a>
+          <a href="registration-details.html"><i class="fa-solid fa-user-check"></i>Registration Details</a>
+        </div>
+      </li>
+      <li><a href="committee.html">Committee</a></li>
+      <li><a href="index.html#speakers">Speakers</a></li>
+      <li><a href="cmt-acknowledgement.html">CMT Acknowledgement</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="paper-submission-guidelines.html"><i
+          class="fa-solid fa-file-arrow-up"></i>Submit Paper</a>
+      <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-top">
+      <div class="brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2027" style="height:34px;"></div>
+      <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <div class="mobile-drop">
+      <a href="javascript:void(0)" class="mobile-toggle">Author <i
+          class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
+      <div class="mobile-sub">
+        <a href="call-for-papers.html">Call for Papers</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="paper-submission-guidelines.html">Paper Submission Guidelines</a>
+        <a href="registration-details.html">Registration Details</a>
       </div>
-    </li>
-    <li><a href="committee.html">Committee</a></li>
-    <li><a href="index.html#speakers">Speakers</a></li>
-    <li><a href="cmt-acknowledgement.html">CMT Acknowledgement</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-  <div class="nav-cta">
-    <a class="btn btn-primary btn-sm" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit Paper</a>
-    <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <a href="committee.html">Committee</a>
+    <a href="index.html#speakers">Speakers</a>
+    <a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
+    <a href="contact.html">Contact Us</a>
+    <a class="btn btn-primary" style="margin-top:22px; justify-content:center;"
+      href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
   </div>
-</nav>
+  <main>
 
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-top">
-    <div class="brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026" style="height:34px;"></div>
-    <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
-  </div>
-  <a href="index.html">Home</a>
-  <a href="index.html#about">About</a>
-  <div class="mobile-drop">
-    <a href="javascript:void(0)" class="mobile-toggle">Author <i class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
-    <div class="mobile-sub">
-      <a href="call-for-papers.html">Call for Papers</a>
-      <a href="schedule.html">Schedule</a>
-      <a href="paper-submission-guidelines.html">Paper Submission Guidelines</a>
-      <a href="registration-details.html">Registration Details</a>
-    </div>
-  </div>
-  <a href="committee.html">Committee</a>
-  <a href="index.html#speakers">Speakers</a>
-  <a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
-  <a href="contact.html">Contact Us</a>
-  <a class="btn btn-primary" style="margin-top:22px; justify-content:center;" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
-</div>
+    <section class="page-hero home-hero" style="padding-top: 120px;">
+      <div class="dotgrid"></div>
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="wrap hero-grid">
 
-<main>
-
-  <section class="page-hero home-hero">
-    <div class="dotgrid"></div>
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="wrap">
-      <div class="hero-badges reveal">
-        <span class="pill"><i class="fa-solid fa-graduation-cap"></i>School of Computer Science &amp; Engineering, Geeta University</span>
-        <span class="pill"><i class="fa-solid fa-book-open"></i>Subject to IEEE Xplore Inclusion</span>
-      </div>
-      <h1 class="reveal">1st International Conference on<br><span>Computational Intelligence &amp; Networked Systems</span></h1>
-      <p class="lead reveal">IC2INS-2026 brings together researchers, academicians, industry professionals and scholars to exchange ideas on intelligent computing, artificial intelligence and networked technologies — 10–11 September 2026, at Geeta University, Panipat, Haryana, India.</p>
-      <div class="btn-row reveal">
-        <a class="btn btn-primary" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
-        <a class="btn btn-ghost" href="committee.html"><i class="fa-solid fa-users"></i>Meet the Committee</a>
-      </div>
-      <div class="facts-row reveal">
-        <div class="fact"><i class="fa-solid fa-calendar-days"></i><span class="lbl">Dates</span><span class="val">10–11 Sept 2026</span></div>
-        <div class="fact"><i class="fa-solid fa-location-dot"></i><span class="lbl">Venue</span><span class="val">Geeta University, Panipat</span></div>
-        <div class="fact"><i class="fa-solid fa-arrow-up-right-from-square"></i><span class="lbl">Publication</span><span class="val">IEEE Xplore (subject to approval)</span></div>
-        <div class="fact"><i class="fa-solid fa-building-columns"></i><span class="lbl">Organised By</span><span class="val">School of CSE, GU</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sect" id="about">
-    <div class="wrap">
-      <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">About the conference</span>
-        <h2>About IC2INS-2026</h2>
-      </div>
-      <div class="prose reveal">
-        <p><b>Welcome to IC2INS-2026:</b> the 1st International Conference on Computational Intelligence and Networked Systems, organised by the School of Computer Science and Engineering, during 10th–11th September 2026 at Geeta University, Campus – Panipat, Haryana, India.</p>
-        <p>IC2INS-2026 is a premier international event aimed at fostering innovation, collaboration and knowledge exchange in the fields of intelligent computing, artificial intelligence and networked technologies. The conference serves as a multidisciplinary platform for researchers, academicians, industry professionals and scholars to present their latest findings, discuss emerging trends and explore future directions in computational intelligence and intelligent communication systems. In a world increasingly driven by automation, digital transformation and smart systems, IC2INS-2026 addresses the pressing need to integrate intelligent algorithms with robust network infrastructure to solve complex, real-world problems.</p>
-        <p>The conference encourages a synergistic blend of theory and application, with an emphasis on impactful, interdisciplinary research that can drive advancements in areas such as healthcare, smart cities, cybersecurity and autonomous systems. IC2INS-2026 is committed to academic excellence and aims to promote international collaboration by connecting participants with global thought leaders, encouraging thought-provoking discussion, and contributing to the evolution of next-generation computing and network paradigms.</p>
-        <p><b>Subject to approval by the IEEE Delhi Section, all accepted and presented papers will be submitted for possible inclusion in the IEEE Xplore Digital Library.</b></p>
-
-        <h3>Conference Objectives</h3>
-        <ul>
-          <li>Explore the convergence of computational intelligence and next-generation networked systems, addressing the demands of automation, digital transformation and intelligent connectivity in modern society.</li>
-          <li>Promote interdisciplinary research that bridges artificial intelligence, communication technologies, machine vision and cyber-physical systems for solving complex, real-world problems.</li>
-          <li>Disseminate cutting-edge developments in neural networks, deep learning, IoT, 5G/6G networks, and AI-driven medical and urban infrastructure applications.</li>
-          <li>Foster collaboration between academia and industry, enabling technology transfer, startup engagement and co-development of smart, sustainable solutions.</li>
-          <li>Provide a platform for practical knowledge exchange — showcasing case studies, scalable AI models and intelligent communication architectures across healthcare, transportation and security.</li>
-          <li>Prepare young researchers for future challenges, encouraging engagement with global experts and deeper understanding of emerging computational paradigms.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="sect bg">
-    <div class="wrap">
-      <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">Focus areas</span>
-        <h2>What we're looking for</h2>
-        <p>A short list of the broad themes IC2INS-2026 welcomes — see Call for Papers for the full scope.</p>
-      </div>
-      <div class="chip-row reveal" style="justify-content:center;">
-        <span class="chip"><i class="fa-solid fa-brain"></i>Artificial Intelligence</span>
-        <span class="chip"><i class="fa-solid fa-network-wired"></i>Advanced Networked Systems &amp; Communication Technologies</span>
-        <span class="chip"><i class="fa-solid fa-eye"></i>Machine Vision &amp; Smart Perception</span>
-        <span class="chip"><i class="fa-solid fa-microchip"></i>Emerging Trends in Computer Technologies</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="sect" id="speakers">
-    <div class="wrap">
-      <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">Keynotes</span>
-        <h2>Speakers</h2>
-        <p>Academics and researchers joining IC2INS-2026 from across the world.</p>
-      </div>
-      <div class="fig-grid reveal" id="speakerGrid"></div>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <div class="cta reveal">
-      <h2>Submissions are open for IC2INS-2026</h2>
-      <p>Share your original research in computational intelligence and networked systems. Accepted papers are presented on campus and — subject to IEEE Delhi Section approval — submitted to IEEE Xplore.</p>
-      <div class="btns" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
-        <a class="btn btn-ghost" href="contact.html"><i class="fa-solid fa-envelope"></i>Contact the Committee</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <div class="foot-brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026"></div>
-          <h4>IC2INS-2026</h4>
-          <p style="max-width:34ch; margin-top:8px;">1st International Conference on Computational Intelligence and Networked Systems, School of Computer Science &amp; Engineering, Geeta University.</p>
+        <div class="hero-col hero-text">
+          <div class="hero-badges reveal">
+            <span class="pill"><i class="fa-solid fa-graduation-cap"></i>School of Computer Science &amp; Engineering,
+              Geeta University</span>
+            <span class="pill"><i class="fa-solid fa-book-open"></i>Subject to IEEE Xplore Inclusion</span>
+          </div>
+          <h1 class="reveal">1st International Conference on<br><span>Computational Intelligence &amp; Networked
+              Systems</span></h1>
+          <p class="lead reveal">IC2INS-2027 brings together researchers, academicians, industry professionals and
+            scholars to exchange ideas on intelligent computing, artificial intelligence and networked technologies —
+            10–11 September 2027, at Geeta University, Panipat, Haryana, India.</p>
         </div>
-        <div class="fcol">
-          <h6>Navigate</h6>
-          <a href="index.html#about">About</a><a href="committee.html">Committee</a><a href="index.html#speakers">Speakers</a><a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
+
+        <div class="hero-col hero-facts-card reveal">
+
+          <div class="fact"><i class="fa-solid fa-calendar-days"></i><span class="lbl">Dates</span><span
+              class="val">10–11 Sept 2027</span></div>
+          <div class="fact"><i class="fa-solid fa-location-dot"></i><span class="lbl">Venue</span><span
+              class="val">Geeta University, Panipat</span></div>
+          <div class="fact"><i class="fa-solid fa-arrow-up-right-from-square"></i><span
+              class="lbl">Publication</span><span class="val">IEEE Xplore (subject to approval)</span></div>
+          <div class="fact"><i class="fa-solid fa-building-columns"></i><span class="lbl">Organised By</span><span
+              class="val">School of CSE, GU</span></div>
+          <div class="btn-row reveal">
+            <a class="btn btn-primary" href="paper-submission-guidelines.html"><i
+                class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
+            <a class="btn btn-ghost" href="committee.html"><i class="fa-solid fa-users"></i>Meet the Committee</a>
+          </div>
         </div>
-        <div class="fcol">
-          <h6>For Authors</h6>
-          <a href="call-for-papers.html">Call for Papers</a><a href="schedule.html">Schedule</a><a href="paper-submission-guidelines.html">Submission Guidelines</a><a href="registration-details.html">Registration Details</a>
+
+      </div>
+    </section>
+
+    <section class="sect" id="about">
+      <div class="wrap">
+        <div class="sect-head reveal">
+          <span class="eyebrow" style="justify-content:center;">About the conference</span>
+          <h2>About IC2INS-2027</h2>
         </div>
-        <div class="fcol">
-          <h6>Reach Us</h6>
-          <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Geeta University, Panipat, Delhi NCR, Haryana, India</span></div>
-          <div class="contact-line"><i class="fa-solid fa-calendar-days"></i><span>10–11 September 2026</span></div>
-          <a href="contact.html">Contact form →</a>
+        <div class="prose reveal">
+          <p><b>Welcome to IC2INS-2027:</b> the 1st International Conference on Computational Intelligence and Networked
+            Systems, organised by the School of Computer Science and Engineering, during 10th–11th September 2027 at
+            Geeta University, Campus – Panipat, Haryana, India.</p>
+          <p>IC2INS-2027 is a premier international event aimed at fostering innovation, collaboration and knowledge
+            exchange in the fields of intelligent computing, artificial intelligence and networked technologies. The
+            conference serves as a multidisciplinary platform for researchers, academicians, industry professionals and
+            scholars to present their latest findings, discuss emerging trends and explore future directions in
+            computational intelligence and intelligent communication systems. In a world increasingly driven by
+            automation, digital transformation and smart systems, IC2INS-2027 addresses the pressing need to integrate
+            intelligent algorithms with robust network infrastructure to solve complex, real-world problems.</p>
+          <p>The conference encourages a synergistic blend of theory and application, with an emphasis on impactful,
+            interdisciplinary research that can drive advancements in areas such as healthcare, smart cities,
+            cybersecurity and autonomous systems. IC2INS-2027 is committed to academic excellence and aims to promote
+            international collaboration by connecting participants with global thought leaders, encouraging
+            thought-provoking discussion, and contributing to the evolution of next-generation computing and network
+            paradigms.</p>
+          <p><b>Subject to approval by the IEEE Delhi Section, all accepted and presented papers will be submitted for
+              possible inclusion in the IEEE Xplore Digital Library.</b></p>
+
+          <h3>Conference Objectives</h3>
+          <ul>
+            <li>Explore the convergence of computational intelligence and next-generation networked systems, addressing
+              the demands of automation, digital transformation and intelligent connectivity in modern society.</li>
+            <li>Promote interdisciplinary research that bridges artificial intelligence, communication technologies,
+              machine vision and cyber-physical systems for solving complex, real-world problems.</li>
+            <li>Disseminate cutting-edge developments in neural networks, deep learning, IoT, 5G/6G networks, and
+              AI-driven medical and urban infrastructure applications.</li>
+            <li>Foster collaboration between academia and industry, enabling technology transfer, startup engagement and
+              co-development of smart, sustainable solutions.</li>
+            <li>Provide a platform for practical knowledge exchange — showcasing case studies, scalable AI models and
+              intelligent communication architectures across healthcare, transportation and security.</li>
+            <li>Prepare young researchers for future challenges, encouraging engagement with global experts and deeper
+              understanding of emerging computational paradigms.</li>
+          </ul>
         </div>
       </div>
-      <div class="fbar">
-        <span>© 2026 IC2INS · School of Computer Science &amp; Engineering, Geeta University</span>
-        <span>Peer review managed via Microsoft CMT</span>
+    </section>
+
+    <section class="sect bg">
+      <div class="wrap">
+        <div class="sect-head reveal">
+          <span class="eyebrow" style="justify-content:center;">Focus areas</span>
+          <h2>What we're looking for</h2>
+          <p>A short list of the broad themes IC2INS-2027 welcomes — see Call for Papers for the full scope.</p>
+        </div>
+        <div class="chip-row reveal" style="justify-content:center;">
+          <span class="chip"><i class="fa-solid fa-brain"></i>Artificial Intelligence</span>
+          <span class="chip"><i class="fa-solid fa-network-wired"></i>Advanced Networked Systems &amp; Communication
+            Technologies</span>
+          <span class="chip"><i class="fa-solid fa-eye"></i>Machine Vision &amp; Smart Perception</span>
+          <span class="chip"><i class="fa-solid fa-microchip"></i>Emerging Trends in Computer Technologies</span>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-</main>
+    <section class="sect" id="speakers">
+      <div class="wrap">
+        <div class="sect-head reveal">
+          <span class="eyebrow" style="justify-content:center;">Keynotes</span>
+          <h2>Speakers</h2>
+          <p>Academics and researchers joining IC2INS-2027 from across the world.</p>
+        </div>
+        <div class="fig-grid reveal" id="speakerGrid"></div>
+      </div>
+    </section>
 
-<script>
-  const speakers = [
-    ["Prof. (Dr.) Valentina E. Balas","Full Professor, Faculty of Engineering, \u201cAurel Vlaicu\u201d University of Arad, Romania · IEEE Senior Member"],
-    ["Prof. (Dr.) Ahmed J. Obaid","Faculty of Computer Science and Mathematics, University of Kufa, Najaf, Iraq"],
-    ["Prof. (Dr.) Ajith Abraham","Vice Chancellor, Sai University, Chennai · Founding Director, Machine Intelligence Research Labs (MIR Labs), Seattle, USA · IEEE Senior Member"],
-    ["Dr. Shakeel Ahmed","Associate Professor, School of Computer Science, Faculty of Innovation & Technology, Taylor's University, Malaysia"],
-    ["Dr. Akshi Kumar","Associate Professor & Director – Postgraduate Research, Department of Computing, Goldsmiths, University of London, UK · IEEE Senior Member"],
-    ["Prof. (Dr.) Sarabjot Singh","Adjunct Faculty, IISER Mohali & GNDEC, Ludhiana"]
-  ];
-  const gradients = ["linear-gradient(135deg,#012e55,#024a82)","linear-gradient(135deg,#ff5f19,#ff8c52)"];
-  const grid = document.getElementById('speakerGrid');
-  speakers.forEach((s,i)=>{
-    const initials = s[0].replace(/^(Prof\.|Dr\.|\(Dr\.\))\s*/g,'').replace(/[()]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
-    const card = document.createElement('div');
-    card.className = 'fig-card';
-    card.innerHTML = `
-      <div class="fig-photo" style="background:${gradients[i%2]}; display:flex; align-items:center; justify-content:center;">
-        <span style="font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700; color:#fff;">${initials}</span>
+    <section class="wrap">
+      <div class="cta reveal">
+        <h2>Submissions are open for IC2INS-2027</h2>
+        <p>Share your original research in computational intelligence and networked systems. Accepted papers are
+          presented on campus and — subject to IEEE Delhi Section approval — submitted to IEEE Xplore.</p>
+        <div class="btns" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="paper-submission-guidelines.html"><i
+              class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
+          <a class="btn btn-ghost" href="contact.html"><i class="fa-solid fa-envelope"></i>Contact the Committee</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-grid">
+          <div>
+            <div class="foot-brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2027"></div>
+            <h4>IC2INS-2027</h4>
+            <p style="max-width:34ch; margin-top:8px;">1st International Conference on Computational Intelligence and
+              Networked Systems, School of Computer Science &amp; Engineering, Geeta University.</p>
+          </div>
+          <div class="fcol">
+            <h6>Navigate</h6>
+            <a href="index.html#about">About</a><a href="committee.html">Committee</a><a
+              href="index.html#speakers">Speakers</a><a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
+          </div>
+          <div class="fcol">
+            <h6>For Authors</h6>
+            <a href="call-for-papers.html">Call for Papers</a><a href="schedule.html">Schedule</a><a
+              href="paper-submission-guidelines.html">Submission Guidelines</a><a
+              href="registration-details.html">Registration Details</a>
+          </div>
+          <div class="fcol">
+            <h6>Reach Us</h6>
+            <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Geeta University, Panipat, Delhi
+                NCR, Haryana, India</span></div>
+            <div class="contact-line"><i class="fa-solid fa-calendar-days"></i><span>10–11 September 2027</span></div>
+            <a href="contact.html">Contact form →</a>
+          </div>
+        </div>
+        <div class="fbar">
+          <span>© 2027 IC2INS · School of Computer Science &amp; Engineering, Geeta University</span>
+          <span>Peer review managed via Microsoft CMT</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    const speakers = [
+      ["Prof. (Dr.) Valentina E. Balas", "Full Professor, Faculty of Engineering, \u201cAurel Vlaicu\u201d University of Arad, Romania · IEEE Senior Member", "assets/img/Valentina-Balas.jpg"],
+      ["Prof. (Dr.) Ahmed J. Obaid", "Faculty of Computer Science and Mathematics, University of Kufa, Najaf, Iraq", "assets/img/Ahmed-J.-Obaid.jpg"],
+      ["Prof. (Dr.) Ajith Abraham", "Vice Chancellor, Sai University, Chennai · Founding Director, Machine Intelligence Research Labs (MIR Labs), Seattle, USA · IEEE Senior Member", "assets/img/Ajit-abraham.png"],
+      ["Dr. Shakeel Ahmed", "Associate Professor, School of Computer Science, Faculty of Innovation & Technology, Taylor's University, Malaysia", "assets/img/Dr. Shakeel Ahmed.jpeg"],
+      ["Dr. Akshi Kumar", "Associate Professor & Director – Postgraduate Research, Department of Computing, Goldsmiths, University of London, UK · IEEE Senior Member", "assets/img/akshi-kumar.jpg"],
+      ["Prof. (Dr.) Sarabjot Singh", "Adjunct Faculty, IISER Mohali & GNDEC, Ludhiana", "assets/img/Sarab-Sir.jpg"]
+    ];
+    const gradients = ["linear-gradient(135deg,#012e55,#024a82)", "linear-gradient(135deg,#ff5f19,#ff8c52)"];
+    const grid = document.getElementById('speakerGrid');
+    speakers.forEach((s, i) => {
+      const initials = s[0].replace(/^(Prof\.|Dr\.|\(Dr\.\))\s*/g, '').replace(/[()]/g, '').split(' ').filter(Boolean).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+      const imgPath = s[2];
+      const card = document.createElement('div');
+      card.className = 'fig-card';
+      card.innerHTML = `
+      <div class="fig-photo" style="background:${gradients[i % 2]}; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+        <img src="${imgPath}" alt="${s[0]}" style="width:100%; height:100%; object-fit:cover;"
+          onerror="this.replaceWith(Object.assign(document.createElement('span'), {textContent:'${initials}', style:'font-family:\\'Space Grotesk\\',sans-serif; font-size:2.4rem; font-weight:700; color:#fff;'}))">
       </div>
       <div class="fig-cap"><h4>${s[0]}</h4><p>${s[1]}</p></div>`;
-    grid.appendChild(card);
-  });
-</script>
-<script src="assets/js/main.js"></script>
+      grid.appendChild(card);
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
