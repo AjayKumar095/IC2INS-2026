@@ -3,277 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICCDS 2026 — Computing &amp; Data Science Conference</title>
+<title>IC2INS-2026 — International Conference on Computational Intelligence and Networked Systems</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23012e55'/%3E%3Ccircle cx='50' cy='42' r='16' fill='%23ff5f19'/%3E%3Crect x='30' y='66' width='40' height='9' rx='4.5' fill='white'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .home-hero{padding:168px 0 80px;}
+  .hero-badges{display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:24px;}
+  .pill{
+    display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.75); backdrop-filter:blur(10px);
+    border:1px solid var(--line); padding:8px 16px; border-radius:100px; font-size:.8rem; font-weight:600; color:var(--navy);
+    box-shadow:var(--shadow-sm);
+  }
+  .pill i{color:var(--orange);}
+  .home-hero h1{font-size:clamp(2.3rem,5vw,3.8rem); line-height:1.1; max-width:920px; margin:0 auto;}
+  .home-hero h1 span{color:var(--orange);}
+  .home-hero .lead{max-width:60ch; margin:22px auto 0; color:var(--ink-soft); font-size:1.1rem;}
+  .facts-row{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0; max-width:1000px; margin:50px auto 0;
+    background:var(--white); border:1px solid var(--line); border-radius:22px; box-shadow:var(--shadow-lg); overflow:hidden;
+  }
+  .facts-row .fact{padding:24px 20px; text-align:center; border-right:1px solid var(--line);}
+  .facts-row .fact:last-child{border-right:none;}
+  .facts-row .fact i{color:var(--orange); font-size:1.2rem; margin-bottom:10px; display:block;}
+  .facts-row .fact .lbl{font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); font-weight:700; display:block; margin-bottom:4px;}
+  .facts-row .fact .val{font-weight:700; color:var(--navy); font-size:.92rem;}
+  @media(max-width:760px){.facts-row{grid-template-columns:repeat(2,1fr);}}
+</style>
 </head>
 <body>
 
 <nav class="nav" id="nav">
-  <div class="brand"><div class="brand-mark"></div>ICCDS 2026</div>
+  <a href="index.html" class="brand">
+    <img src="assets/img/geeta-university-logo.png" alt="Geeta University">
+    <div class="brand-sep"></div>
+    <img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026" style="height:36px;">
+    <div class="brand-text"><b>IC2INS-2026</b><span>10–11 Sept 2026 · Geeta University</span></div>
+  </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about" data-target="about">About</a></li>
-    <li><a href="#topics" data-target="topics">Topics</a></li>
-    <li><a href="#timeline" data-target="timeline">Timeline</a></li>
-    <li><a href="#committee" data-target="committee">Committee</a></li>
-    <li><a href="#speakers" data-target="speakers">Speakers</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li class="has-dropdown">
+      <button class="nav-drop-btn">Author <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="dropdown-menu">
+        <a href="call-for-papers.html"><i class="fa-solid fa-bullhorn"></i>Call for Papers</a>
+        <a href="schedule.html"><i class="fa-solid fa-calendar-days"></i>Schedule</a>
+        <a href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Paper Submission Guidelines</a>
+        <a href="registration-details.html"><i class="fa-solid fa-user-check"></i>Registration Details</a>
+      </div>
+    </li>
+    <li><a href="committee.html">Committee</a></li>
+    <li><a href="index.html#speakers">Speakers</a></li>
+    <li><a href="cmt-acknowledgement.html">CMT Acknowledgement</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
   </ul>
   <div class="nav-cta">
-    <a class="btn btn-ghost btn-sm" href="#contact">Contact</a>
-    <a class="btn btn-primary btn-sm" href="mailto:iccds2026@rajalakshmi.edu.in"><i class="fa-solid fa-file-arrow-up"></i>Submit Paper</a>
+    <a class="btn btn-primary btn-sm" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit Paper</a>
     <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
   </div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-top">
-    <div class="brand"><div class="brand-mark"></div>ICCDS 2026</div>
+    <div class="brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026" style="height:34px;"></div>
     <button class="burger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
   </div>
-  <a href="#about">About</a>
-  <a href="#topics">Topics</a>
-  <a href="#timeline">Timeline</a>
-  <a href="#committee">Committee</a>
-  <a href="#speakers">Speakers</a>
-  <a href="#contact">Contact</a>
-  <a class="btn btn-primary" style="margin-top:24px; justify-content:center;" href="mailto:iccds2026@rajalakshmi.edu.in"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>
+  <div class="mobile-drop">
+    <a href="javascript:void(0)" class="mobile-toggle">Author <i class="fa-solid fa-chevron-down mobile-toggle-caret"></i></a>
+    <div class="mobile-sub">
+      <a href="call-for-papers.html">Call for Papers</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="paper-submission-guidelines.html">Paper Submission Guidelines</a>
+      <a href="registration-details.html">Registration Details</a>
+    </div>
+  </div>
+  <a href="committee.html">Committee</a>
+  <a href="index.html#speakers">Speakers</a>
+  <a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
+  <a href="contact.html">Contact Us</a>
+  <a class="btn btn-primary" style="margin-top:22px; justify-content:center;" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
 </div>
 
 <main>
 
-  <section class="hero">
+  <section class="page-hero home-hero">
     <div class="dotgrid"></div>
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
-    <div class="wrap hero-inner">
-      <div class="hero-grid">
-
-        <div class="hero-left reveal">
-          <div class="hero-badges">
-            <span class="pill"><i class="fa-solid fa-award"></i>IEEE Conference Record #69942</span>
-            <span class="pill"><i class="fa-solid fa-globe"></i>Technically sponsored by IEEE Madras Section</span>
-          </div>
-          <h1>3rd International Conference on<br><span>Computing &amp; Data Science</span></h1>
-          <p class="hero-desc">Two days of peer-reviewed research, keynotes and cross-industry dialogue at Rajalakshmi Engineering College — presented papers are published in IEEE Xplore.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="mailto:iccds2026@rajalakshmi.edu.in"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
-            <a class="btn btn-ghost" href="#timeline"><i class="fa-solid fa-calendar-days"></i>View Timeline</a>
-          </div>
-        </div>
-
-        <div class="hero-right reveal">
-          <div class="hero-panel">
-            <span class="hero-panel-label"><i class="fa-solid fa-hourglass-half"></i>Countdown to Day One</span>
-            <div class="countdown" id="countdown">
-              <div class="cd-box"><span class="n" id="cd-d">00</span><span class="l">Days</span></div>
-              <div class="cd-box"><span class="n" id="cd-h">00</span><span class="l">Hours</span></div>
-              <div class="cd-box"><span class="n" id="cd-m">00</span><span class="l">Minutes</span></div>
-              <div class="cd-box"><span class="n" id="cd-s">00</span><span class="l">Seconds</span></div>
-            </div>
-            <div class="hero-panel-divider"></div>
-            <div class="facts-list">
-              <div class="fact-row"><div class="fact-ic"><i class="fa-solid fa-calendar-days"></i></div><div><span class="lbl">Date</span><span class="val">Oct 9–10, 2026</span></div></div>
-              <div class="fact-row"><div class="fact-ic"><i class="fa-solid fa-location-dot"></i></div><div><span class="lbl">Venue</span><span class="val">REC, Chennai, India</span></div></div>
-              <div class="fact-row"><div class="fact-ic"><i class="fa-solid fa-arrow-up-right-from-square"></i></div><div><span class="lbl">Published In</span><span class="val">IEEE Xplore · Scopus</span></div></div>
-              <div class="fact-row"><div class="fact-ic"><i class="fa-solid fa-building-columns"></i></div><div><span class="lbl">Organised By</span><span class="val">Dept. of CSE, REC</span></div></div>
-            </div>
-          </div>
-        </div>
-
+    <div class="wrap">
+      <div class="hero-badges reveal">
+        <span class="pill"><i class="fa-solid fa-graduation-cap"></i>School of Computer Science &amp; Engineering, Geeta University</span>
+        <span class="pill"><i class="fa-solid fa-book-open"></i>Subject to IEEE Xplore Inclusion</span>
+      </div>
+      <h1 class="reveal">1st International Conference on<br><span>Computational Intelligence &amp; Networked Systems</span></h1>
+      <p class="lead reveal">IC2INS-2026 brings together researchers, academicians, industry professionals and scholars to exchange ideas on intelligent computing, artificial intelligence and networked technologies — 10–11 September 2026, at Geeta University, Panipat, Haryana, India.</p>
+      <div class="btn-row reveal">
+        <a class="btn btn-primary" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
+        <a class="btn btn-ghost" href="committee.html"><i class="fa-solid fa-users"></i>Meet the Committee</a>
+      </div>
+      <div class="facts-row reveal">
+        <div class="fact"><i class="fa-solid fa-calendar-days"></i><span class="lbl">Dates</span><span class="val">10–11 Sept 2026</span></div>
+        <div class="fact"><i class="fa-solid fa-location-dot"></i><span class="lbl">Venue</span><span class="val">Geeta University, Panipat</span></div>
+        <div class="fact"><i class="fa-solid fa-arrow-up-right-from-square"></i><span class="lbl">Publication</span><span class="val">IEEE Xplore (subject to approval)</span></div>
+        <div class="fact"><i class="fa-solid fa-building-columns"></i><span class="lbl">Organised By</span><span class="val">School of CSE, GU</span></div>
       </div>
     </div>
   </section>
 
   <section class="sect" id="about">
     <div class="wrap">
-      <div class="bento reveal">
-        <div class="bento-main">
-          <span class="eyebrow">About the conference</span>
-          <h2>Three editions of research, industry and community</h2>
-          <p>Since its founding in 1997, the Department of Computer Science and Engineering at Rajalakshmi Engineering College has built a steady record in teaching and research. Recognised by Anna University as a Collaborative Research Centre, the department runs M.S. (by research) and Ph.D. programmes alongside active industry partnerships for training, faculty development and joint R&amp;D. ICCDS 2026 is the department's third edition, continuing its focus on original, unpublished research across computing and data science.</p>
-          <div class="partners">
-            <span class="partner-chip">IBM</span><span class="partner-chip">Infosys</span><span class="partner-chip">TCS</span>
-            <span class="partner-chip">Zoho</span><span class="partner-chip">Oracle</span><span class="partner-chip">Wipro</span>
-            <span class="partner-chip">AWS</span><span class="partner-chip">Dell</span><span class="partner-chip">Cognizant</span>
-          </div>
-        </div>
-        <div class="bento-side">
-          <div class="stat-card"><span class="n">1997</span><span class="l">Department established</span></div>
-          <div class="stat-card orange"><span class="n">3rd</span><span class="l">Edition of ICCDS</span></div>
-        </div>
+      <div class="sect-head reveal">
+        <span class="eyebrow" style="justify-content:center;">About the conference</span>
+        <h2>About IC2INS-2026</h2>
+      </div>
+      <div class="prose reveal">
+        <p><b>Welcome to IC2INS-2026:</b> the 1st International Conference on Computational Intelligence and Networked Systems, organised by the School of Computer Science and Engineering, during 10th–11th September 2026 at Geeta University, Campus – Panipat, Haryana, India.</p>
+        <p>IC2INS-2026 is a premier international event aimed at fostering innovation, collaboration and knowledge exchange in the fields of intelligent computing, artificial intelligence and networked technologies. The conference serves as a multidisciplinary platform for researchers, academicians, industry professionals and scholars to present their latest findings, discuss emerging trends and explore future directions in computational intelligence and intelligent communication systems. In a world increasingly driven by automation, digital transformation and smart systems, IC2INS-2026 addresses the pressing need to integrate intelligent algorithms with robust network infrastructure to solve complex, real-world problems.</p>
+        <p>The conference encourages a synergistic blend of theory and application, with an emphasis on impactful, interdisciplinary research that can drive advancements in areas such as healthcare, smart cities, cybersecurity and autonomous systems. IC2INS-2026 is committed to academic excellence and aims to promote international collaboration by connecting participants with global thought leaders, encouraging thought-provoking discussion, and contributing to the evolution of next-generation computing and network paradigms.</p>
+        <p><b>Subject to approval by the IEEE Delhi Section, all accepted and presented papers will be submitted for possible inclusion in the IEEE Xplore Digital Library.</b></p>
+
+        <h3>Conference Objectives</h3>
+        <ul>
+          <li>Explore the convergence of computational intelligence and next-generation networked systems, addressing the demands of automation, digital transformation and intelligent connectivity in modern society.</li>
+          <li>Promote interdisciplinary research that bridges artificial intelligence, communication technologies, machine vision and cyber-physical systems for solving complex, real-world problems.</li>
+          <li>Disseminate cutting-edge developments in neural networks, deep learning, IoT, 5G/6G networks, and AI-driven medical and urban infrastructure applications.</li>
+          <li>Foster collaboration between academia and industry, enabling technology transfer, startup engagement and co-development of smart, sustainable solutions.</li>
+          <li>Provide a platform for practical knowledge exchange — showcasing case studies, scalable AI models and intelligent communication architectures across healthcare, transportation and security.</li>
+          <li>Prepare young researchers for future challenges, encouraging engagement with global experts and deeper understanding of emerging computational paradigms.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="sect bg" id="topics">
+  <section class="sect bg">
     <div class="wrap">
       <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">Call for papers</span>
-        <h2>Four tracks, wide open</h2>
-        <p>Original, unpublished work is invited across the tracks below — this list is indicative, not exhaustive.</p>
+        <span class="eyebrow" style="justify-content:center;">Focus areas</span>
+        <h2>What we're looking for</h2>
+        <p>A short list of the broad themes IC2INS-2026 welcomes — see Call for Papers for the full scope.</p>
       </div>
-      <div class="topics-grid reveal">
-        <div class="topic-card">
-          <span class="topic-tag">01</span>
-          <div class="topic-ic"><i class="fa-solid fa-brain"></i></div>
-          <h4>AI &amp; Computing</h4>
-          <ul><li>Artificial Intelligence</li><li>Machine Learning</li><li>Deep Learning</li><li>Natural Language Processing</li><li>Human Computer Interaction</li></ul>
-        </div>
-        <div class="topic-card">
-          <span class="topic-tag">02</span>
-          <div class="topic-ic"><i class="fa-solid fa-chart-line"></i></div>
-          <h4>Data Science &amp; Analytics</h4>
-          <ul><li>Data Science</li><li>Big Data Analytics</li><li>Medical Image Processing</li><li>Digital Image Processing</li><li>Virtual &amp; Augmented Reality</li></ul>
-        </div>
-        <div class="topic-card">
-          <span class="topic-tag">03</span>
-          <div class="topic-ic"><i class="fa-solid fa-cloud"></i></div>
-          <h4>Cloud &amp; Distributed</h4>
-          <ul><li>Cloud Computing</li><li>Distributed Computing</li><li>Mobile &amp; Pervasive Computing</li><li>Internet of Things</li><li>Green Computing</li></ul>
-        </div>
-        <div class="topic-card">
-          <span class="topic-tag">04</span>
-          <div class="topic-ic"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4>Networks &amp; Security</h4>
-          <ul><li>Information &amp; Data Security</li><li>Smart Networking</li><li>Adhoc Networks</li><li>Wireless Sensor Networks</li><li>Network Protocols &amp; QoS</li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sect" id="timeline">
-    <div class="wrap">
-      <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">Key dates</span>
-        <h2>Five milestones to the opening session</h2>
-      </div>
-      <div class="timeline reveal">
-        <div class="tl-step"><div class="tl-dot">01</div><div class="tl-date">Aug 10</div><h4>Full Paper Submission</h4><p>Deadline for original manuscripts.</p></div>
-        <div class="tl-step"><div class="tl-dot">02</div><div class="tl-date">Sept 1</div><h4>Acceptance Notification</h4><p>Review decisions sent to authors.</p></div>
-        <div class="tl-step"><div class="tl-dot">03</div><div class="tl-date">Sept 20</div><h4>Registration Closes</h4><p>Author &amp; delegate deadline.</p></div>
-        <div class="tl-step"><div class="tl-dot">04</div><div class="tl-date">Sept 20</div><h4>Camera-Ready Paper</h4><p>Final formatted paper due.</p></div>
-        <div class="tl-step now"><div class="tl-dot"><i class="fa-solid fa-star"></i></div><div class="tl-date">Oct 9–10</div><h4>Conference Dates</h4><p>Two days at REC, Chennai.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sect bg" id="committee">
-    <div class="wrap">
-      <div class="sect-head reveal">
-        <span class="eyebrow" style="justify-content:center;">People behind ICCDS</span>
-        <h2>Committee &amp; Reviewers</h2>
-        <p>Organised across five groups — switch between them below.</p>
-      </div>
-
-      <div class="seg-wrap reveal"><div class="seg" id="seg">
-        <button class="active" data-panel="p-leader">Leadership</button>
-        <button data-panel="p-tech">Technical Committee</button>
-        <button data-panel="p-org">Organizing Committee</button>
-        <button data-panel="p-adv">Advisory Board</button>
-        <button data-panel="p-rev">Reviewers</button>
-      </div></div>
-
-      <div class="cpanel active" id="p-leader">
-        <div class="leader-grid">
-          <div class="leader-card"><h5>Chief Patrons</h5>
-            <div class="person"><div class="avatar">SM</div><div><span class="name">Mr. S. Meganathan</span><span class="role">Correspondent, Rajalakshmi Institutions</span></div></div>
-            <div class="person"><div class="avatar">TM</div><div><span class="name">Dr. (Mrs.) Thangam Meganathan</span><span class="role">Chairperson, Rajalakshmi Institutions</span></div></div>
-            <div class="person"><div class="avatar">AM</div><div><span class="name">Mr. Abhay Shankar Meganathan</span><span class="role">Vice Chairman, REC</span></div></div>
-          </div>
-          <div class="leader-card"><h5>Patrons</h5>
-            <div class="person"><div class="avatar">CM</div><div><span class="name">Dr. C.R. Muthukrishnan</span><span class="role">Advisor, Rajalakshmi Institutions</span></div></div>
-            <div class="person"><div class="avatar">SM</div><div><span class="name">Dr. S.N. Murugesan</span><span class="role">Principal, REC</span></div></div>
-            <div class="person"><div class="avatar">SS</div><div><span class="name">Dr. S.P. Srinivasan</span><span class="role">Vice Principal, REC</span></div></div>
-            <div class="person"><div class="avatar">KM</div><div><span class="name">Dr. K. Malathi</span><span class="role">Dean – Academics, REC</span></div></div>
-            <div class="person"><div class="avatar">PS</div><div><span class="name">Dr. P. Sakthivel</span><span class="role">Chairman, IEEE Madras Section</span></div></div>
-            <div class="person"><div class="avatar">JM</div><div><span class="name">Dr. J. Manoranjini</span><span class="role">HOD, Dept. of CSE, REC</span></div></div>
-          </div>
-          <div class="leader-card"><h5>Convener &amp; Coordinators</h5>
-            <div class="person"><div class="avatar">PK</div><div><span class="name">Dr. P. Kumar</span><span class="role">Convener · Professor, Dept. of CSE</span></div></div>
-            <div class="person"><div class="avatar">KA</div><div><span class="name">Dr. K. Ananthajothi</span><span class="role">Coordinator · Professor, Dept. of CSE</span></div></div>
-            <div class="person"><div class="avatar">ND</div><div><span class="name">Dr. N. Duraimurugan</span><span class="role">Coordinator · Associate Professor, Dept. of CSE</span></div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cpanel" id="p-tech">
-        <div class="simple-grid">
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. V. Nagarajan</b>Professor, Pondicherry University, India</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. A. Kandasamy</b>Professor, NIT Karnataka, India</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. A. Amuthan</b>Professor &amp; Associate Dean, Pondicherry Technological University</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. Subhash Chandra Yadav</b>Professor &amp; Head, Central University of Jharkhand</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. Brojo Kishore Mishra</b>Professor, NIST Institute of Science &amp; Technology, Odisha</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. B. Surendiran</b>Associate Dean, NIT Puducherry</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. Durgesh Mishra</b>Director &amp; Campus Director, Symbiosis University of Applied Sciences</div></div>
-        </div>
-      </div>
-
-      <div class="cpanel" id="p-org">
-        <div class="simple-grid">
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. V. Murali Bhaskaran</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. S. Anantha Sivaprakasam</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. N. Srinivasan</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. R. Sabitha</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. P. Muneehswari</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. C. Parthasarathy</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. K. Anand</b>Professor, Dept. of CSE, REC</div></div>
-          <div class="simple-item"><i class="fa-solid fa-user"></i><div><b>Dr. Chettiyar Vani Vivekanand</b>Professor, Dept. of CSE, REC</div></div>
-        </div>
-      </div>
-
-      <div class="cpanel" id="p-adv">
-        <div class="adv-cols">
-          <div class="adv-group">
-            <h6>International</h6>
-            <div class="simple-grid" style="grid-template-columns:1fr;">
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Shuai Li</b>Associate Professor, Swansea University, UK</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Stephen Olatundeolabiyisi</b>Professor, LadokeAkintola University, Nigeria</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Joy Long-Zhong Chen</b>Professor, Brunel University, London</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Neda Azizi</b>Senior Lecturer, Torrens University, Australia</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Bhadrachalam Chitturi</b>Associate Professor, UT Dallas, USA</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Yu Xiang</b>Assistant Professor, UT Dallas, USA</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. John Cole</b>Senior Lecturer, UT Dallas, USA</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Kinshuk</b>Dean, University of North Texas, USA</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Saif Aldeen Saad Alkadhim</b>Assistant Lecturer, Xi'an Jiaotong University, China</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Maleika Heenaye-Mamode Khan</b>Associate Professor, University of Mauritius</div></div>
-              <div class="simple-item"><i class="fa-solid fa-globe"></i><div><b>Dr. Fatma Sayed Gadelrab</b>Associate Professor, Helwan University, Egypt</div></div>
-            </div>
-          </div>
-          <div class="adv-group">
-            <h6>National</h6>
-            <div class="simple-grid" style="grid-template-columns:1fr;">
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. T. Shanmuganantham</b>Vice Chairman (Academics), IEEE Madras Section</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. Ramalatha Marimuthu</b>Vice Chairman (Industry), IEEE Madras Section</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. R. Radha</b>Secretary, IEEE Madras Section &amp; Principal, SSN College of Engineering</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. S. Brindha</b>Treasurer, IEEE Madras Section</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. M. Palanivelan</b>IEEE Student Branch Counsellor, REC</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. S. Joseph Gladwin</b>BigCat Wireless Pvt. Ltd., IIT Madras Research Park</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. R. Murugan</b>Associate Professor, NIT Silchar</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. B. Surendiran</b>Associate Dean, NIT Puducherry</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. V.D. Ambeth Kumar</b>Associate Professor, Mizoram University</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. R. Saminathan</b>Associate Professor, Annamalai University</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. M.D. Selvaraj</b>Associate Professor, IIITDM Kancheepuram</div></div>
-              <div class="simple-item"><i class="fa-solid fa-flag"></i><div><b>Dr. G. Kumaravelan</b>Associate Professor, Pondicherry University</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cpanel" id="p-rev">
-        <div class="rev-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="revSearch" placeholder="Search reviewers by name or institution…">
-        </div>
-        <div class="rev-panel">
-          <div class="rev-cols" id="revList">
-            <!-- populated by JS -->
-          </div>
-        </div>
+      <div class="chip-row reveal" style="justify-content:center;">
+        <span class="chip"><i class="fa-solid fa-brain"></i>Artificial Intelligence</span>
+        <span class="chip"><i class="fa-solid fa-network-wired"></i>Advanced Networked Systems &amp; Communication Technologies</span>
+        <span class="chip"><i class="fa-solid fa-eye"></i>Machine Vision &amp; Smart Perception</span>
+        <span class="chip"><i class="fa-solid fa-microchip"></i>Emerging Trends in Computer Technologies</span>
       </div>
     </div>
   </section>
@@ -282,55 +160,79 @@
     <div class="wrap">
       <div class="sect-head reveal">
         <span class="eyebrow" style="justify-content:center;">Keynotes</span>
-        <h2>Fourteen speakers, four continents</h2>
-        <p>Academics and engineers from across research and industry.</p>
+        <h2>Speakers</h2>
+        <p>Academics and researchers joining IC2INS-2026 from across the world.</p>
       </div>
-      <div class="fig-grid reveal" id="figGrid"></div>
+      <div class="fig-grid reveal" id="speakerGrid"></div>
     </div>
   </section>
 
   <section class="wrap">
     <div class="cta reveal">
-      <h2>Submissions close August 10, 2026</h2>
-      <p>Send original, unpublished manuscripts for peer review. Accepted papers are presented on campus and published in IEEE Xplore.</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="mailto:iccds2026@rajalakshmi.edu.in"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
-        <a class="btn btn-ghost" href="#contact"><i class="fa-solid fa-envelope"></i>Contact the Committee</a>
+      <h2>Submissions are open for IC2INS-2026</h2>
+      <p>Share your original research in computational intelligence and networked systems. Accepted papers are presented on campus and — subject to IEEE Delhi Section approval — submitted to IEEE Xplore.</p>
+      <div class="btns" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="paper-submission-guidelines.html"><i class="fa-solid fa-file-arrow-up"></i>Submit a Paper</a>
+        <a class="btn btn-ghost" href="contact.html"><i class="fa-solid fa-envelope"></i>Contact the Committee</a>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
+  <footer>
     <div class="wrap">
       <div class="foot-grid">
         <div>
-          <div class="foot-brand"><div class="brand-mark"></div><h4>ICCDS 2026</h4></div>
-          <p style="max-width:34ch;">3rd International Conference on Computing &amp; Data Science, Dept. of CSE, Rajalakshmi Engineering College.</p>
+          <div class="foot-brand"><img src="assets/img/ic2ins-logo.jpeg" alt="IC2INS-2026"></div>
+          <h4>IC2INS-2026</h4>
+          <p style="max-width:34ch; margin-top:8px;">1st International Conference on Computational Intelligence and Networked Systems, School of Computer Science &amp; Engineering, Geeta University.</p>
         </div>
         <div class="fcol">
           <h6>Navigate</h6>
-          <a href="#about">About</a><a href="#topics">Topics</a><a href="#timeline">Timeline</a><a href="#committee">Committee</a><a href="#speakers">Speakers</a>
+          <a href="index.html#about">About</a><a href="committee.html">Committee</a><a href="index.html#speakers">Speakers</a><a href="cmt-acknowledgement.html">CMT Acknowledgement</a>
         </div>
         <div class="fcol">
-          <h6>Venue</h6>
-          <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Rajalakshmi Engineering College, Rajalakshmi Nagar, Thandalam, Chennai – 602105, Tamil Nadu, India</span></div>
+          <h6>For Authors</h6>
+          <a href="call-for-papers.html">Call for Papers</a><a href="schedule.html">Schedule</a><a href="paper-submission-guidelines.html">Submission Guidelines</a><a href="registration-details.html">Registration Details</a>
         </div>
         <div class="fcol">
-          <h6>Contact</h6>
-          <div class="contact-line"><i class="fa-solid fa-phone"></i><span>Dr. N. Duraimurugan — 9944915267</span></div>
-          <div class="contact-line"><i class="fa-solid fa-phone"></i><span>Dr. K. Ananthajothi — 9994075769</span></div>
-          <div class="contact-line"><i class="fa-solid fa-envelope"></i><span>iccds2026@rajalakshmi.edu.in</span></div>
+          <h6>Reach Us</h6>
+          <div class="contact-line"><i class="fa-solid fa-location-dot"></i><span>Geeta University, Panipat, Delhi NCR, Haryana, India</span></div>
+          <div class="contact-line"><i class="fa-solid fa-calendar-days"></i><span>10–11 September 2026</span></div>
+          <a href="contact.html">Contact form →</a>
         </div>
       </div>
       <div class="fbar">
-        <span>© 2026 ICCDS · Rajalakshmi Engineering College</span>
-        <span>Technically sponsored by IEEE Madras Section</span>
+        <span>© 2026 IC2INS · School of Computer Science &amp; Engineering, Geeta University</span>
+        <span>Peer review managed via Microsoft CMT</span>
       </div>
     </div>
   </footer>
 
 </main>
 
-<script src="js/main.js"></script>
+<script>
+  const speakers = [
+    ["Prof. (Dr.) Valentina E. Balas","Full Professor, Faculty of Engineering, \u201cAurel Vlaicu\u201d University of Arad, Romania · IEEE Senior Member"],
+    ["Prof. (Dr.) Ahmed J. Obaid","Faculty of Computer Science and Mathematics, University of Kufa, Najaf, Iraq"],
+    ["Prof. (Dr.) Ajith Abraham","Vice Chancellor, Sai University, Chennai · Founding Director, Machine Intelligence Research Labs (MIR Labs), Seattle, USA · IEEE Senior Member"],
+    ["Dr. Shakeel Ahmed","Associate Professor, School of Computer Science, Faculty of Innovation & Technology, Taylor's University, Malaysia"],
+    ["Dr. Akshi Kumar","Associate Professor & Director – Postgraduate Research, Department of Computing, Goldsmiths, University of London, UK · IEEE Senior Member"],
+    ["Prof. (Dr.) Sarabjot Singh","Adjunct Faculty, IISER Mohali & GNDEC, Ludhiana"]
+  ];
+  const gradients = ["linear-gradient(135deg,#012e55,#024a82)","linear-gradient(135deg,#ff5f19,#ff8c52)"];
+  const grid = document.getElementById('speakerGrid');
+  speakers.forEach((s,i)=>{
+    const initials = s[0].replace(/^(Prof\.|Dr\.|\(Dr\.\))\s*/g,'').replace(/[()]/g,'').split(' ').filter(Boolean).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+    const card = document.createElement('div');
+    card.className = 'fig-card';
+    card.innerHTML = `
+      <div class="fig-photo" style="background:${gradients[i%2]}; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700; color:#fff;">${initials}</span>
+      </div>
+      <div class="fig-cap"><h4>${s[0]}</h4><p>${s[1]}</p></div>`;
+    grid.appendChild(card);
+  });
+</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
