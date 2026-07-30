@@ -1,5 +1,7 @@
 // ===================== IC2INS-2027 shared behaviour =====================
 
+document.addEventListener('DOMContentLoaded', function(){
+
 // ---- nav scroll shadow ----
 const nav = document.getElementById('nav');
 if(nav){
@@ -83,3 +85,5 @@ document.querySelectorAll('[data-search-target]').forEach(input=>{
     if(counter) counter.textContent = visible + ' result' + (visible===1?'':'s');
   });
 });
+
+}); // end DOMContentLoaded
