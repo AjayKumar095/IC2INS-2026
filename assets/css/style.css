@@ -58,6 +58,7 @@ h4 {
 
 p {
   margin: 0;
+  text-align: justify;
 }
 
 a {
@@ -636,19 +637,24 @@ ul {
 .hero-facts-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 10px;
   box-shadow: var(--shadow-lg);
 }
 
 .hero-facts-card .fact {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 14px;
+  gap: 10px;
+  padding: 10px 8px;
+}
+.hero-facts-card .factM {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 8px;
   border-bottom: 1px solid var(--line);
 }
 
